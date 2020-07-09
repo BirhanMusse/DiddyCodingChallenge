@@ -1,8 +1,9 @@
 package com.revature.eval.java.core;
-
+import org.springframework.stereotype.Controller;
 import java.time.temporal.Temporal;
 import java.util.List;
 import java.util.Map;
+
 
 public class EvaluationService {
 
@@ -14,10 +15,17 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String reverse(String string) {
+boolean bool =false;
+		String reversed="";
+		for(int x = string.length()-1; x>=0;x-- ) {
+			reversed+=string.charAt(x);
+		}
+		System.out.println(reversed);
 
-		return null;
+		return reversed;
 	}
 
+System.out.println("true");
 	/**
 	 * 2. Convert a phrase to its acronym. Techies love their TLA (Three Letter
 	 * Acronyms)! Help generate some jargon by writing a program that converts a
@@ -27,6 +35,7 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String acronym(String phrase) {
+		
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
@@ -81,21 +90,36 @@ public class EvaluationService {
 		}
 
 		public boolean isEquilateral() {
+			if (this.sideOne == this.sideTwo && this.sideTwo == this.sideThree ) {
+				return true;
+			} else {
+				return false;
+			}
+				
 			// TODO Write an implementation for this method declaration
-			return false;
+			
 		}
 
 		public boolean isIsosceles() {
-			// TODO Write an implementation for this method declaration
-			return false;
+			if (this.sideOne == this.sideTwo || this.sideTwo == this.sideThree) {
+				return true;
+			} else {
+				return false;
+
+			}
 		}
 
 		public boolean isScalene() {
-			// TODO Write an implementation for this method declaration
-			return false;
-		}
+			if (this.sideOne != this.sideTwo || this.sideTwo != this.sideThree || this.sideThree != this.sideOne) {
+				return true;
+			}
+			else {
+				return false;}
+			}
+			
+		
 
-	}
+	
 
 	/**
 	 * 4. Given a word, compute the scrabble score for that word.
@@ -281,6 +305,7 @@ public class EvaluationService {
 		// TODO Write an implementation for this method declaration
 		return null;
 	}
+
 
 	/**
 	 * 11. Create an implementation of the rotational cipher, also sometimes called
@@ -537,5 +562,19 @@ public class EvaluationService {
 		// TODO Write an implementation for this method declaration
 		return 0;
 	}
+	
+	}
+
+	public Map<String, Integer> wordCount(String string) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+	
+	public Map<String, Integer> wordCount(String string) {
+		// TODO Write an implementation for this method declaration
+		return null;
+	}
+
 
 }
